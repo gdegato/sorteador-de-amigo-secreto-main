@@ -1,19 +1,20 @@
-import { render, screen } from "@testing-library/react";
-import { RecoilRoot } from 'recoil';
-import { ListaParticipantes } from "./ListaParticipantes";
-import { useListaDeParticipantes } from "./state/hooks/useListaDeParticipantes";
+import { render, screen } from '@testing-library/react'
+import React from 'react'
+import { RecoilRoot } from 'recoil'
+import { useListaDeParticipantes } from '../state/hook/useListaDeParticipantes'
+import ListaParticipantes from '../componentes/ListaParticipantes'
 
-jest.mock("./state/hooks/useListaDeParticipantes", () => {
+jest.mock('../state/hook/useListaDeParticipantes', () => {
     return {
         useListaDeParticipantes: jest.fn()
     }
 })
 
-describe('Uma lista inicialmente vazia de participantes', () => {
+describe('uma lista vazia de participantes', () => {
     beforeEach(() => {
         (useListaDeParticipantes as jest.Mock).mockReturnValue([])
     })
-    test('Deve ser renderizada sem elementos', () => {
+    test('deve ser renderizada sem elementos', () => {
         render(<RecoilRoot>
             <ListaParticipantes />
         </RecoilRoot>)
@@ -23,13 +24,12 @@ describe('Uma lista inicialmente vazia de participantes', () => {
     })
 })
 
-describe('Uma lista preenchida de participantes', () => {
+describe('uma lista preenchida de participantes', () => {
     const participantes = ['Ana', 'Catarina']
-
     beforeEach(() => {
         (useListaDeParticipantes as jest.Mock).mockReturnValue(participantes)
     })
-    test('Deve ser renderizada sem elementos', () => {
+    test('deve ser renderizada sem elementos', () => {
         render(<RecoilRoot>
             <ListaParticipantes />
         </RecoilRoot>)
