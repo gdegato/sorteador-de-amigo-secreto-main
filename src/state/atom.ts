@@ -4,8 +4,8 @@ export const listaParticipantesState = atom<string[]>({
     key: 'listaParticipantesState',
     default: []
 });
-export const resultadoDoAmigoSecreto = atom<Map<string, string>>({
-    key: 'resultadoDoAmigoSecreto',
+export const resultadoAmigoSecreto = atom<Map<string, string>>({
+    key: 'resultadoAmigoSecreto',
     default: new Map()
 });
 

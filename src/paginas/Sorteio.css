@@ -1,3 +1,4 @@
+/* src/paginas/Sorteio.css */
 footer.sorteio {
     margin: 64px 0;
 }
@@ -53,6 +54,7 @@ p {
     select {
         width: 100%;
     }
+
     .botao-sortear {
         width: 220px;
         margin: 32px 0;
