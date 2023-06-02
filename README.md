@@ -16,9 +16,6 @@ A aplicação apresenta as funcionalidades de um amigo secreto para sorteio onli
 - `React Testing Library`
 - `Recoil`
 
-## Demonstração
-
-![Image](image.png)
 
 ## 🛠️ Abrir e rodar o projeto
 
